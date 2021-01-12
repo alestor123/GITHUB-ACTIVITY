@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a simple code for getting github activities of a user",
   "main": "App.js",
+  "bin": {
+    "github-activity": "cli.js"
+  },
   "dependencies": {
     "axios": "^0.21.1"
   },
