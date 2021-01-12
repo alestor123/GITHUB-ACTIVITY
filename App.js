@@ -5,7 +5,7 @@ module.exports = async (username,token) => {
 if(!username) throw Error('Username not found')
 if(token) axios.defaults.headers.common['Authorization'] = `bearer ${token}`
 var data = await axios.get(`https://api.github.com/users/${username}/events`)
-data.data.filter((activity) => acts.includes(activity.type)).slice(0, 10).map(activity => ac.push(Events(activity)))
+data.data.filter((activity) => acts.includes(activity.type)).slice(0, 10).forEach(activity => ac.push(Events(activity)))
 return ac
 }
 function Events(activity){
